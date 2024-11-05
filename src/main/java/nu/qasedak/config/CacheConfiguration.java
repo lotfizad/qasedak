@@ -41,6 +41,11 @@ public class CacheConfiguration {
             createCache(cm, nu.qasedak.repository.UserRepository.USERS_BY_LOGIN_CACHE);
             createCache(cm, nu.qasedak.repository.UserRepository.USERS_BY_EMAIL_CACHE);
             createCache(cm, nu.qasedak.domain.Authority.class.getName());
+            createCache(cm, nu.qasedak.domain.Blog.class.getName());
+            createCache(cm, nu.qasedak.domain.Post.class.getName());
+            createCache(cm, nu.qasedak.domain.Post.class.getName() + ".tags");
+            createCache(cm, nu.qasedak.domain.Tag.class.getName());
+            createCache(cm, nu.qasedak.domain.Tag.class.getName() + ".posts");
             // jhipster-needle-ehcache-add-entry
         };
     }
